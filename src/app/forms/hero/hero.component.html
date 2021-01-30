@@ -1,1 +1,22 @@
-<p>hero works!</p>
+<form [formGroup]="heroForm">
+  <nb-card>
+    <nb-card-header>Hero</nb-card-header>
+    <nb-card-body class="col">
+      <input
+        formControlName="heroName"
+        type="text"
+        nbInput
+        placeholder="Hero name"
+      />
+      <input formControlName="aka" type="text" nbInput placeholder="AKA" />
+    </nb-card-body>
+  </nb-card>
+
+  <nb-card>
+    <nb-card-header>Super Power</nb-card-header>
+    <nb-card-body class="col">
+      <app-powers></app-powers>
+    </nb-card-body>
+  </nb-card>
+  <button (click)="logFormData()" nbButton status="primary">Submit</button>
+</form>

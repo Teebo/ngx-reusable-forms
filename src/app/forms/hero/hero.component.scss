@@ -1,0 +1,9 @@
+.col {
+  display: flex;
+  flex-direction: column;
+
+  nb-select,
+  input {
+    margin-bottom: 15px;
+  }
+}

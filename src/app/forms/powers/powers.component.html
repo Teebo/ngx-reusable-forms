@@ -1,1 +1,13 @@
-<p>powers works!</p>
+<form class="col" [formGroup]="powersForm">
+  <nb-select formControlName="superPower" placeholder="Select super power">
+    <nb-option value="1">Lightning Fingers</nb-option>
+    <nb-option value="2">Stoic Code</nb-option>
+    <nb-option value="3">Color Dreamer</nb-option>
+    <nb-option value="4">Super I/O</nb-option>
+  </nb-select>
+  <textarea
+    formControlName="powerDescription"
+    nbInput
+    placeholder="Textarea"
+  ></textarea>
+</form>

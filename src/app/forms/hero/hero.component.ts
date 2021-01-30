@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PowersComponent } from '../powers/powers.component';
 
 @Component({
   selector: 'app-hero',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
+  @ViewChild(PowersComponent, { static: true }) public powersComponent: PowersComponent;
 
-  constructor() { }
+  public heroForm: FormGroup;
+  constructor(private formBuilder: FormBuilder) {
+  }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.heroForm = this.formBuilder.group({
+      heroName: ['', Validators.required],
+      aka: ['', Validators.required],
+      powers: this.powersComponent.createFormGroup()
+    })
+  }
+
+  public logFormData(): void {
+    console.log(this.heroForm.value);
   }
 
 }
