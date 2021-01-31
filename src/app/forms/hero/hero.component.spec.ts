@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HobbiesStubComponent } from './component-stubs/hobbies-stub.component';
 
 import { HeroComponent } from './hero.component';
 
@@ -11,8 +12,9 @@ describe('HeroComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeroComponent],
-      providers: [{ provide: FormBuilder, useValue: formBuilder }]
+      declarations: [HeroComponent, HobbiesStubComponent],
+      providers: [{ provide: FormBuilder, useValue: formBuilder }],
+      imports: [FormsModule, ReactiveFormsModule]
     })
       .compileComponents();
   }));

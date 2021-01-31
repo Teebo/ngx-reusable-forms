@@ -18,5 +18,15 @@
       <app-powers></app-powers>
     </nb-card-body>
   </nb-card>
+
+  <nb-card>
+    <nb-card-header>Hobbies</nb-card-header>
+    <nb-card-body class="col">
+      <app-hobbies
+        [parentForm]="heroForm"
+        [formGroup]="heroForm.get('hobbies')"
+      ></app-hobbies>
+    </nb-card-body>
+  </nb-card>
   <button (click)="logFormData()" nbButton status="primary">Submit</button>
 </form>

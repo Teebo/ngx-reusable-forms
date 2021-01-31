@@ -15,12 +15,14 @@ import {
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HobbiesComponent } from './hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
-    PowersComponent
+    PowersComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,

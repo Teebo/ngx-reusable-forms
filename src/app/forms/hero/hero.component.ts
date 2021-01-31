@@ -18,7 +18,10 @@ export class HeroComponent implements OnInit {
     this.heroForm = this.formBuilder.group({
       heroName: ['', Validators.required],
       aka: ['', Validators.required],
-      powers: this.powersComponent.createFormGroup()
+      powers: this.powersComponent.createFormGroup(),
+      hobbies: this.formBuilder.group({
+        favoriteHobby: ['', Validators.required]
+      })
     })
   }
 
