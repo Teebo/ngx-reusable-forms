@@ -15,7 +15,7 @@ import {
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HobbiesComponent } from './hobbies/hobbies.component';
+import { HobbiesComponent } from './forms/hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
